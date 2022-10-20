@@ -22,9 +22,9 @@ struct Stats compute_statistics(const float* numberset, int setlength) {
 				s.max = numberset[i];
 		}
 		s.average = average / setlength;
-		printf("minimum value in numberset array is : %d",s.min);
-		printf("maximum value in numberset array is : %d",s.max);
-		printf("average value in numberset array is : %d",s.average);
+		printf("minimum value in numberset array is : %f\r\n",s.min);
+		printf("maximum value in numberset array is : %f\r\n",s.max);
+		printf("average value in numberset array is : %f\r\n",s.average);
 	}
 	else
 	{
