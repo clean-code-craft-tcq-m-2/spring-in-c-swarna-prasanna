@@ -1,6 +1,7 @@
 #include "stats.h"
 #include <stdlib.h>
 #include <math.h>
+#include <stdio.h>
 
 struct Stats compute_statistics(const float* numberset, int setlength) {
 	struct Stats s;
@@ -45,8 +46,9 @@ void ledAlerter(void) {
 	ledAlertCallCount++;
 }
 
-check_and_alert(float maxThreshold, alerter_funcptr alerters[], struct Stats computedStats){
+void check_and_alert(float maxThreshold, alerter_funcptr alerters[], struct Stats computedStats){
 	if (computedStats.max > maxThreshold) {
 		alerters[0]();
 		alerters[1]();
+	}
 }
