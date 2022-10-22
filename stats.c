@@ -1,7 +1,7 @@
 #include "stats.h"
 #include <stdlib.h>
 #include <math.h>
-#include <stdio.h>
+
 
 struct Stats compute_statistics(const float* numberset, int setlength) {
 	struct Stats s;
