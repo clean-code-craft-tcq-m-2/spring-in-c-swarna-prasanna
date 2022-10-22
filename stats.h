@@ -1,3 +1,8 @@
+struct Stats {
+	float average;
+	float max;
+	float min;
+};
 
 struct Stats compute_statistics(const float* numberset, int setlength);
 
@@ -6,3 +11,6 @@ void check_and_alert(float maxThreshold, alerter_funcptr alerters[], struct Stat
 
 extern int emailAlertCallCount;
 extern int ledAlertCallCount;
+
+void emailAlerter(void);
+void ledAlerter(void);
